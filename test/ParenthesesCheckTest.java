@@ -4,7 +4,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class IsValidExpressionTest {
+public class ParenthesesCheckTest {
     @DisplayName("IsValidExpression Test")
     @ParameterizedTest(name = "#{index}\t \"{0}\" \t {1}")
     @CsvSource({
@@ -15,7 +15,7 @@ public class IsValidExpressionTest {
             "(– b + (b^2 – 4*a*c)^(0.5/ 2*a)), true",
     })
     public void test(String input, boolean expected){
-        boolean actual = Main.isValidExpression(input);
+        boolean actual = Main.parenthesesCheck(input);
         assertEquals(expected, actual);
     }
 }

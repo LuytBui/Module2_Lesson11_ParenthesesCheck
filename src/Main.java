@@ -5,11 +5,11 @@ public class Main {
     public static void main(String[] args) {
         String string1 = "s * (s – a) * (s – b) * (s – c)";
         String string2 = "s * (s – a) * (s – b * (s – c)    ";
-        System.out.println(isValidExpression(string1));
-        System.out.println(isValidExpression(string2));
+        System.out.println(parenthesesCheck(string1));
+        System.out.println(parenthesesCheck(string2));
     }
 
-    public static boolean isValidExpression(String string) {
+    public static boolean parenthesesCheck(String string) {
         final char OPEN = '(';
         final char CLOSE = ')';
         Stack<Character> stack = new Stack<>();
